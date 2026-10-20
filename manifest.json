@@ -1,0 +1,12 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "DoodleNotes",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "DoodleNotes",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "description": "An all-in-one student workspace featuring quick notes, a calculator, a study timer, and a doodle studio."
+}
