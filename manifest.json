@@ -1,12 +1,23 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "DoodleNotes",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "DoodleNotes",
-  "start_url": "/",
-  "theme_color": "#ffffff",
-  "description": "An all-in-one student workspace featuring quick notes, a calculator, a study timer, and a doodle studio."
+  "description": "An all-in-one student workspace featuring quick notes, a calculator, a study timer, and a doodle studio.",
+  "start_url": "/doodlenotes/",
+  "display": "standalone",
+  "background_color": "#eef2f5",
+  "theme_color": "#2c3e50",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192.png?text=DN",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/512.png?text=DN",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
