@@ -1,0 +1,323 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f5;
+    margin: 0;
+    padding: 20px 20px 40px 20px;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #7f8c8d;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+}
+
+.panel {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    flex: 1;
+    min-width: 320px;
+}
+
+.full-width {
+    flex: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #34495e;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Notes Section */
+.input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+li {
+    background: #f8f9fa;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+li button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Calculator Section */
+#calcDisplay {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fdfdfd;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.btn-calc {
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    background: #f1f2f6;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-calc:hover {
+    background: #e4e7eb;
+}
+
+.btn-action {
+    background: #dfe6e9;
+    color: #2d3436;
+}
+
+.btn-equal {
+    background: #2ecc71;
+    color: white;
+    grid-row: span 2;
+}
+
+.btn-equal:hover {
+    background: #27ae60;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Timer Section */
+.timer-box {
+    text-align: center;
+}
+
+#timerDisplay {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Doodle Studio Toolbar */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.tool-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-presets {
+    display: flex;
+    gap: 5px;
+}
+
+.color-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.btn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-primary { background: #3498db; color: white; border: none; }
+.btn-danger { background: #e74c3c; color: white; border: none; }
+.btn-success { background: #2ecc71; color: white; border: none; }
+
+.active-tool {
+    background: #2c3e50 !important;
+    color: white !important;
+}
+
+canvas {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: crosshair;
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+/* Branding Footer */
+.branding-footer {
+    text-align: right;
+    max-width: 1100px;
+    margin: 20px auto 0 auto;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- Dark Mode Theme --- */
+body.dark-mode {
+    background: #1a1a1a;
+    color: #f1f1f1;
+}
+
+body.dark-mode header h1 {
+    color: #f1f1f1;
+}
+
+body.dark-mode header p {
+    color: #aaa;
+}
+
+body.dark-mode .panel {
+    background: #2d2d2d;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    color: #f1f1f1;
+}
+
+body.dark-mode h2 {
+    color: #f1f1f1;
+    border-bottom: 2px solid #444;
+}
+
+body.dark-mode input, 
+body.dark-mode #calcDisplay {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode li {
+    background: #383838;
+    color: white;
+    border-left-color: #3498db;
+}
+
+body.dark-mode .btn-calc {
+    background: #383838;
+    color: white;
+}
+
+body.dark-mode .btn-calc:hover {
+    background: #484848;
+}
+
+body.dark-mode .btn-action {
+    background: #444;
+    color: white;
+}
+
+body.dark-mode canvas {
+    background: #2d2d2d;
+    border-color: #444;
+}
+
+body.dark-mode .toolbar {
+    background: #222;
+}
+
+body.dark-mode #timerDisplay {
+    color: #f1f1f1;
+}
+
+body.dark-mode .branding-footer {
+    color: #888;
+}

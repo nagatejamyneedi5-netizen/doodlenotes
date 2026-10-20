@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoodleNotes - Student Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div>
+                <h1>✨ DoodleNotes</h1>
+                <p>Your all-in-one student workspace</p>
+            </div>
+            <button class="btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Section 1: Notes & To-Do -->
+        <div class="panel">
+            <h2>📝 To-Do & Quick Notes</h2>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Add a new task or note...">
+                <button class="btn btn-primary" onclick="addTask()">Add</button>
+            </div>
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Section 2: Calculator -->
+        <div class="panel">
+            <h2>🔢 Quick Calculator</h2>
+            <input type="text" id="calcDisplay" placeholder="0" readonly>
+            <div class="calc-buttons">
+                <button class="btn-calc btn-action" onclick="clearCalc()">C</button>
+                <button class="btn-calc btn-action" onclick="appendCalc('/')">/</button>
+                <button class="btn-calc btn-action" onclick="appendCalc('*')">×</button>
+                <button class="btn-calc btn-action" onclick="appendCalc('-')">-</button>
+                <button class="btn-calc" onclick="appendCalc('7')">7</button>
+                <button class="btn-calc" onclick="appendCalc('8')">8</button>
+                <button class="btn-calc" onclick="appendCalc('9')">9</button>
+                <button class="btn-calc btn-action" onclick="appendCalc('+')">+</button>
+                <button class="btn-calc" onclick="appendCalc('4')">4</button>
+                <button class="btn-calc" onclick="appendCalc('5')">5</button>
+                <button class="btn-calc" onclick="appendCalc('6')">6</button>
+                <button class="btn-calc btn-equal" onclick="calculate()">=</button>
+                <button class="btn-calc" onclick="appendCalc('1')">1</button>
+                <button class="btn-calc" onclick="appendCalc('2')">2</button>
+                <button class="btn-calc" onclick="appendCalc('3')">3</button>
+                <button class="btn-calc btn-zero" onclick="appendCalc('0')">0</button>
+                <button class="btn-calc" onclick="appendCalc('.')">.</button>
+            </div>
+        </div>
+
+        <!-- Section 3: Pomodoro Study Timer -->
+        <div class="panel">
+            <h2>⏱️ Study Timer</h2>
+            <div class="timer-box">
+                <h1 id="timerDisplay">25:00</h1>
+                <div class="timer-buttons">
+                    <button class="btn btn-primary" onclick="startTimer()">Start 25m</button>
+                    <button class="btn btn-danger" onclick="resetTimer()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Advanced Doodle Studio -->
+        <div class="panel full-width">
+            <h2>🎨 Doodle Studio</h2>
+            
+            <!-- Doodle Toolbar -->
+            <div class="toolbar">
+                <div class="tool-group">
+                    <label>Tool:</label>
+                    <button id="penBtn" class="btn active-tool" onclick="setTool('pen')">✏️ Pen</button>
+                    <button id="markerBtn" class="btn" onclick="setTool('marker')">🖍️ Marker</button>
+                    <button id="eraserBtn" class="btn" onclick="setTool('eraser')">🧹 Eraser</button>
+                </div>
+
+                <div class="tool-group">
+                    <label>Color:</label>
+                    <input type="color" id="colorPicker" value="#000000" onchange="changeColor(this.value)">
+                    <div class="color-presets">
+                        <span class="color-dot" style="background:#000000" onclick="changeColor('#000000')"></span>
+                        <span class="color-dot" style="background:#e74c3c" onclick="changeColor('#e74c3c')"></span>
+                        <span class="color-dot" style="background:#2ecc71" onclick="changeColor('#2ecc71')"></span>
+                        <span class="color-dot" style="background:#3498db" onclick="changeColor('#3498db')"></span>
+                        <span class="color-dot" style="background:#f1c40f" onclick="changeColor('#f1c40f')"></span>
+                    </div>
+                </div>
+
+                <div class="tool-group">
+                    <label>Size:</label>
+                    <input type="range" id="brushSize" min="1" max="40" value="3">
+                </div>
+
+                <div class="tool-group">
+                    <button class="btn btn-danger" onclick="clearCanvas()">Clear All</button>
+                    <button class="btn btn-success" onclick="downloadCanvas()">💾 Download Image</button>
+                </div>
+            </div>
+
+            <canvas id="doodleCanvas" width="800" height="350"></canvas>
+        </div>
+    </div>
+
+    <!-- Branding Footer -->
+    <div class="branding-footer">
+        Made by NAGA TEJA MYNEEDI
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
